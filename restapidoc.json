@@ -1,0 +1,318 @@
+{
+   "basePath": "http://localhost:8080/RestApiDoc-example",
+   "apis": [{
+      "methods": [
+         {
+            "headers": [],
+            "bodyobject": null,
+            "jsondocId": "9f37646c-5180-4e75-b0b5-632722dff07b",
+            "consumes": [],
+            "response": {
+               "mapKeyObject": "",
+               "jsondocId": "c444ebc8-7997-40ff-9e01-2a0f25cb58fc",
+               "mapValueObject": "",
+               "object": "employee"
+            },
+            "pathparameters": [{
+               "jsondocId": "85585398-be04-4dd4-86a1-8610396d0748",
+               "description": "The employee id",
+               "name": "id",
+               "allowedvalues": [],
+               "format": "",
+               "required": "true",
+               "type": "long"
+            }],
+            "apierrors": [
+               {
+                  "jsondocId": "af22c948-a07e-4cc0-928e-61cb2cc191fc",
+                  "description": "Bad Request: missing parameters or bad message format",
+                  "code": "400"
+               },
+               {
+                  "jsondocId": "8bd4a074-bea0-4c34-b585-6a52178afc4e",
+                  "description": "Unauthorized: must be auth",
+                  "code": "401"
+               },
+               {
+                  "jsondocId": "6103cf87-d2d5-42d1-8e2e-bc2fecadb516",
+                  "description": "Forbidden: role error",
+                  "code": "403"
+               },
+               {
+                  "jsondocId": "8ab7de6c-ee0c-46fa-abe6-b78022e981db",
+                  "description": "Object not found",
+                  "code": "404"
+               }
+            ],
+            "verb": "GET",
+            "description": "Get an employee",
+            "queryparameters": [],
+            "path": "/employee/{id}",
+            "produces": ["application/json"],
+            "methodName": "get"
+         },
+         {
+            "headers": [],
+            "bodyobject": {
+               "mapKeyObject": "",
+               "jsondocId": "a09eb01a-0599-4e89-9bcd-13d6184e3755",
+               "mapValueObject": "",
+               "map": "",
+               "object": "employee",
+               "multiple": "Unknow"
+            },
+            "jsondocId": "1f2668a2-ede2-40cc-baab-c2cf153c1e75",
+            "consumes": ["application/json"],
+            "response": {
+               "mapKeyObject": "",
+               "jsondocId": "f3e179f2-2a81-41b1-8283-db25aaaf2e23",
+               "mapValueObject": "",
+               "object": "employee"
+            },
+            "pathparameters": [{
+               "jsondocId": "eee40c03-36db-4706-bccc-e356edf0f110",
+               "description": "Employee Object",
+               "name": "Employee",
+               "allowedvalues": [],
+               "format": "",
+               "required": "true",
+               "type": "Object"
+            }],
+            "apierrors": [
+               {
+                  "jsondocId": "bf604998-1b0d-45ec-abbd-f8417dc45e4d",
+                  "description": "Bad Request: missing parameters or bad message format",
+                  "code": "400"
+               },
+               {
+                  "jsondocId": "458d0c42-ff43-4769-b43b-9a9c78848aaa",
+                  "description": "Unauthorized: must be auth",
+                  "code": "401"
+               },
+               {
+                  "jsondocId": "39750b23-00c1-46c5-8295-e97e6d3cf417",
+                  "description": "Forbidden: role error",
+                  "code": "403"
+               },
+               {
+                  "jsondocId": "765c370b-2a67-4088-b4f6-08c446ff62f5",
+                  "description": "Object not found",
+                  "code": "404"
+               },
+               {
+                  "jsondocId": "2a5a164b-2500-428d-a973-7a37ed03374d",
+                  "description": "Object already exist",
+                  "code": "409"
+               }
+            ],
+            "verb": "POST",
+            "description": "Insert an employee",
+            "queryparameters": [],
+            "path": "/employee",
+            "produces": ["application/json"],
+            "methodName": "create"
+         },
+         {
+            "headers": [],
+            "bodyobject": null,
+            "jsondocId": "de043fdf-99ea-4cd2-a0b6-f029bfc1da23",
+            "consumes": [],
+            "response": {
+               "mapKeyObject": "",
+               "jsondocId": "666abaa6-d935-4905-9a11-874a64e4ca88",
+               "mapValueObject": "",
+               "object": "employee"
+            },
+            "pathparameters": [],
+            "apierrors": [
+               {
+                  "jsondocId": "5692f279-c0e8-433c-8d6e-a58f1bd3a9ae",
+                  "description": "Bad Request: missing parameters or bad message format",
+                  "code": "400"
+               },
+               {
+                  "jsondocId": "cac16022-f67c-4476-878d-a72babc6dab6",
+                  "description": "Unauthorized: must be auth",
+                  "code": "401"
+               },
+               {
+                  "jsondocId": "7acd6a81-3ccb-4a74-9aef-e247edf1cddf",
+                  "description": "Forbidden: role error",
+                  "code": "403"
+               },
+               {
+                  "jsondocId": "aa620a33-706a-436f-8bed-3c221816d35b",
+                  "description": "Object not found",
+                  "code": "404"
+               }
+            ],
+            "verb": "GET",
+            "description": "List all employees",
+            "queryparameters": [],
+            "path": "/employees",
+            "produces": ["application/json"],
+            "methodName": "list"
+         },
+         {
+            "headers": [],
+            "bodyobject": null,
+            "jsondocId": "f9414069-3f90-4a0e-91f1-105243e44585",
+            "consumes": [],
+            "response": {
+               "mapKeyObject": "",
+               "jsondocId": "d018a1eb-19bf-4a83-8b8a-69455f8e5245",
+               "mapValueObject": "",
+               "object": "employee"
+            },
+            "pathparameters": [{
+               "jsondocId": "589eb042-490e-4cd8-b861-61bfcb630a0b",
+               "description": "The employee id",
+               "name": "id",
+               "allowedvalues": [],
+               "format": "",
+               "required": "true",
+               "type": "long"
+            }],
+            "apierrors": [
+               {
+                  "jsondocId": "26618afd-e96c-437f-baba-c29871175818",
+                  "description": "Bad Request: missing parameters or bad message format",
+                  "code": "400"
+               },
+               {
+                  "jsondocId": "c5a96760-876a-4d4e-900b-38e805ef3728",
+                  "description": "Unauthorized: must be auth",
+                  "code": "401"
+               },
+               {
+                  "jsondocId": "54fbe47d-820b-47a1-b165-c378473f2057",
+                  "description": "Forbidden: role error",
+                  "code": "403"
+               },
+               {
+                  "jsondocId": "f3970143-62c2-4dd6-9ce1-8bdf85045a78",
+                  "description": "Object not found",
+                  "code": "404"
+               }
+            ],
+            "verb": "DELETE",
+            "description": "Delete an employee",
+            "queryparameters": [],
+            "path": "/employee/{id}",
+            "produces": ["application/json"],
+            "methodName": "delete"
+         },
+         {
+            "headers": [],
+            "bodyobject": {
+               "mapKeyObject": "",
+               "jsondocId": "2b9ac358-a259-4124-9498-6e761d9460d1",
+               "mapValueObject": "",
+               "map": "",
+               "object": "employee",
+               "multiple": "Unknow"
+            },
+            "jsondocId": "3a29de4c-2b96-46ba-9293-3a0aac26dfb5",
+            "consumes": ["application/json"],
+            "response": {
+               "mapKeyObject": "",
+               "jsondocId": "5cbc581c-db2e-4bba-9c7d-0c7afb8d4351",
+               "mapValueObject": "",
+               "object": "employee"
+            },
+            "pathparameters": [{
+               "jsondocId": "2418cd89-e04f-4ef6-ba73-03327a03fd33",
+               "description": "The employee id",
+               "name": "id",
+               "allowedvalues": [],
+               "format": "",
+               "required": "true",
+               "type": "long"
+            }],
+            "apierrors": [
+               {
+                  "jsondocId": "153f8e95-bf2e-404c-86aa-1ffbdddd77f3",
+                  "description": "Bad Request: missing parameters or bad message format",
+                  "code": "400"
+               },
+               {
+                  "jsondocId": "cbabc7b6-9500-45f8-8bfb-578c6b6b21b6",
+                  "description": "Unauthorized: must be auth",
+                  "code": "401"
+               },
+               {
+                  "jsondocId": "98108eee-7487-43ef-9606-39b95ecc0392",
+                  "description": "Forbidden: role error",
+                  "code": "403"
+               },
+               {
+                  "jsondocId": "090126d7-f3e2-4c8d-a340-c476313f9c00",
+                  "description": "Object not found",
+                  "code": "404"
+               },
+               {
+                  "jsondocId": "d545594c-3a7d-40dc-8d62-3dfa5d2fe656",
+                  "description": "Object already exist",
+                  "code": "409"
+               }
+            ],
+            "verb": "PUT",
+            "description": "Update an employee",
+            "queryparameters": [],
+            "path": "/employee/{id}",
+            "produces": ["application/json"],
+            "methodName": "update"
+         }
+      ],
+      "jsondocId": "ff61831c-698a-45e7-891d-ac84664d7d9d",
+      "description": "Methods for managing employees",
+      "name": "Employee Service"
+   }],
+   "objects": [{
+      "jsondocId": "6b8de889-fdf5-4a23-8224-92353b77bfd1",
+      "description": "An employee works in organisation",
+      "name": "employee",
+      "fields": [
+         {
+            "jsondocId": "8f426798-8385-4714-afe7-fe6738ffe838",
+            "description": null,
+            "presentInResponse": null,
+            "mandatory": null,
+            "name": "id",
+            "allowedvalues": null,
+            "useForCreation": null,
+            "format": null,
+            "defaultValue": null,
+            "type": "Long",
+            "multiple": "false"
+         },
+         {
+            "jsondocId": "3244b79f-c95d-406e-9b80-ddb2d162be24",
+            "description": "Name of an employee",
+            "presentInResponse": true,
+            "mandatory": true,
+            "name": "name",
+            "allowedvalues": null,
+            "useForCreation": true,
+            "format": null,
+            "defaultValue": null,
+            "type": "String",
+            "multiple": "false"
+         },
+         {
+            "jsondocId": "60f69979-ec07-4f59-a418-c8bd0fc5b1ae",
+            "description": "Name of an organisation",
+            "presentInResponse": true,
+            "mandatory": true,
+            "name": "organisation",
+            "allowedvalues": null,
+            "useForCreation": true,
+            "format": null,
+            "defaultValue": null,
+            "type": "String",
+            "multiple": "false"
+         }
+      ]
+   }],
+   "version": "0.1.1"
+}

@@ -1,21 +1,23 @@
 package grails.employee.app
 
 import grails.converters.JSON
+import grails.rest.RestfulController
 import org.restapidoc.annotation.RestApi
 import org.restapidoc.annotation.RestApiMethod
 import org.restapidoc.annotation.RestApiParam
 import org.restapidoc.annotation.RestApiParams
-import org.restapidoc.pojo.*
+import org.restapidoc.pojo.RestApiParamType
+import org.restapidoc.pojo.RestApiVerb
 
 @RestApi(name = "Employee Service", description = "Methods for managing employees")
-class EmployeeController {
+class EmployeeController extends RestfulController {
 
-    @RestApiMethod(description = "List all employees", listing = true)
+    @RestApiMethod(verb = RestApiVerb.GET, description = "List all employees", listing = true)
     def list() {
         respond Employee.list(), formats: ['json']
     }
 
-    @RestApiMethod(description = "Insert an employee")
+    @RestApiMethod(verb = RestApiVerb.POST,description = "Insert an employee")
     @RestApiParams(params = [ @RestApiParam(name="Employee", type = "Object", paramType = RestApiParamType.PATH, description = "Employee Object")])
     def create() {
         def emp = request.getJSON()
@@ -24,9 +26,9 @@ class EmployeeController {
         respond employee, formats: ['json']
     }
 
-    @RestApiMethod(description = "Get an employee")
+    @RestApiMethod(verb = RestApiVerb.GET, description = "Get an employee")
     @RestApiParams(params = [ @RestApiParam(name = "id", type = "long", paramType = RestApiParamType.PATH,
-    description = "The employee id")])
+        description = "The employee id")])
     def get() {
         def employee = Employee.get(params.long('id'))
         println employee.toString()
@@ -35,7 +37,7 @@ class EmployeeController {
         }
     }
 
-    @RestApiMethod(description = "Update an employee")
+    @RestApiMethod(verb = RestApiVerb.PUT, description = "Update an employee")
     @RestApiParams(params = [ @RestApiParam(name = "id", type = "long", paramType = RestApiParamType.PATH,
             description = "The employee id")])
     def update() {
@@ -54,7 +56,7 @@ class EmployeeController {
         respond employee, formats: ['json']
     }
 
-    @RestApiMethod(description = "Delete an employee")
+    @RestApiMethod(verb = RestApiVerb.DELETE, description = "Delete an employee")
     @RestApiParams(params = [ @RestApiParam(name = "id", type = "long", paramType = RestApiParamType.PATH,
             description = "The employee id")])
     def delete() {

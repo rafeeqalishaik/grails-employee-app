@@ -10,9 +10,9 @@
           <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.4.0/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/plugin-config-0.2.0/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/rest-api-doc-0.6.1/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/rest-api-doc-0.6.1/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/plugin-config-0.2.0/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
